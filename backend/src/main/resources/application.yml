@@ -1,0 +1,47 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: pos-backend
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/pos_system
+    username: root
+    password: root
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: validate 
+    show-sql: false
+    properties:
+      hibernate:
+        format_sql: true
+        jdbc.time_zone: UTC
+
+  flyway:
+    enabled: true
+    locations: classpath:db/migration
+    baseline-on-migrate: true
+
+app:
+  jwt:
+    secret: "CHANGE_THIS_TO_A_LONG_RANDOM_SECRET_BEFORE_DEPLOYING_TO_PRODUCTION_1234567890"
+    expiration-ms: 43200000   # 12 hours
+
+  cors:
+    allowed-origins: "http://localhost:4200"
+
+  stock:
+    alert-check-cron: "0 */15 * * * *"   # every 15 minutes
+    default-safety-stock-days: 7
+
+  ai:
+    anthropic-api-key: 
+    anthropic-model: gpt-5.6-luna
+    forecast-history-months: 6
+
+logging:
+  level:
+    com.posapp: INFO

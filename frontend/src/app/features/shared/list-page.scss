@@ -1,0 +1,50 @@
+.header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 20px; }
+.sub { color: var(--text-muted); font-size: 13px; margin: 4px 0 0; }
+.cta {
+  background: var(--cobalt); color: #fff; padding: 10px 18px; border: none;
+  border-radius: 8px; font-weight: 600; font-size: 13px; cursor: pointer;
+}
+
+.data-table {
+  width: 100%; border-collapse: collapse; background: var(--surface);
+  border: 1px solid var(--border); border-radius: 10px; overflow: hidden; font-size: 13.5px;
+}
+.data-table th {
+  text-align: left; background: var(--canvas); color: var(--text-muted);
+  font-size: 11.5px; text-transform: uppercase; letter-spacing: .03em;
+  padding: 10px 14px; font-weight: 700;
+}
+.data-table td { padding: 11px 14px; border-top: 1px solid var(--border); }
+.data-table td.low { color: var(--amber); font-weight: 700; }
+.data-table td.actions { display: flex; gap: 8px; }
+.data-table td.actions button {
+  border: 1px solid var(--border); background: var(--surface); border-radius: 6px;
+  padding: 5px 10px; font-size: 12px; cursor: pointer;
+}
+.data-table td.actions button:hover { border-color: var(--cobalt); color: var(--cobalt); }
+.muted { color: var(--text-muted); text-align: center; padding: 24px; }
+
+.modal-backdrop {
+  position: fixed; inset: 0; background: rgba(20,33,61,0.45);
+  display: flex; align-items: center; justify-content: center; z-index: 50;
+}
+.modal {
+  width: 520px; max-height: 86vh; overflow-y: auto; background: var(--surface);
+  border-radius: 12px; padding: 26px; box-shadow: var(--shadow-2);
+}
+.modal.narrow { width: 380px; }
+.modal h3 { margin-bottom: 16px; }
+.modal label { display: block; font-size: 12px; font-weight: 600; color: var(--text-muted); margin: 10px 0 5px; }
+.modal input, .modal select {
+  width: 100%; padding: 9px 11px; border: 1px solid var(--border); border-radius: 7px; font-size: 13.5px; font-family: inherit;
+}
+.grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 0 14px; }
+.checkbox { display: flex; align-items: center; gap: 8px; margin-top: 16px; font-size: 13px; font-weight: 500; color: var(--text); }
+.checkbox input { width: auto; }
+.recipe-builder { margin-top: 12px; background: var(--canvas); border-radius: 8px; padding: 12px; }
+.recipe-row { display: grid; grid-template-columns: 1fr 100px 30px; gap: 8px; margin-bottom: 8px; align-items: center; }
+.recipe-row .remove { border: none; background: none; color: var(--text-muted); cursor: pointer; }
+.add-line { border: 1px dashed var(--border); background: none; padding: 7px; border-radius: 6px; font-size: 12.5px; cursor: pointer; width: 100%; }
+.modal-actions { display: flex; justify-content: flex-end; gap: 10px; margin-top: 22px; }
+.modal-actions button { padding: 9px 18px; border-radius: 8px; border: 1px solid var(--border); background: var(--surface); font-weight: 600; font-size: 13px; cursor: pointer; }
+.modal-actions button.primary { background: var(--cobalt); color: #fff; border: none; }

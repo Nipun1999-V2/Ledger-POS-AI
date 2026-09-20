@@ -1,0 +1,81 @@
+/* =======================================================================
+   Design tokens — "Ledger" operations theme
+   Ink navy nav + canvas grey work surface, cobalt for actions, amber for
+   stock warnings, ledger green for revenue. Inter for UI text, Space
+   Grotesk for headline numbers (revenue, totals) so the figures that
+   matter on a POS screen get visual weight without shouting in caps.
+   ======================================================================= */
+:root {
+  --ink: #14213D;
+  --ink-soft: #263A5E;
+  --canvas: #F1F4F9;
+  --surface: #FFFFFF;
+  --border: #E2E7F0;
+  --text: #1B2333;
+  --text-muted: #667088;
+
+  --cobalt: #2F5EA8;
+  --cobalt-dark: #234779;
+  --amber: #DD8B1F;
+  --amber-soft: #FCEFDA;
+  --ledger-green: #1E7A5B;
+  --ledger-green-soft: #E4F3EC;
+  --alert-red: #C0392B;
+  --alert-red-soft: #FBEAE8;
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --shadow-1: 0 1px 2px rgba(20, 33, 61, 0.06), 0 1px 1px rgba(20, 33, 61, 0.04);
+  --shadow-2: 0 4px 16px rgba(20, 33, 61, 0.08);
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  height: 100%;
+  margin: 0;
+  background: var(--canvas);
+  color: var(--text);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+}
+
+.figure {
+  font-family: 'Space Grotesk', 'Inter', sans-serif;
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
+}
+
+h1, h2, h3, h4 { margin: 0 0 4px; color: var(--ink); font-weight: 700; }
+
+a { color: var(--cobalt); text-decoration: none; }
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-1);
+  padding: 20px;
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+}
+.pill.amber { background: var(--amber-soft); color: var(--amber); }
+.pill.green { background: var(--ledger-green-soft); color: var(--ledger-green); }
+.pill.red { background: var(--alert-red-soft); color: var(--alert-red); }
+
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-thumb { background: #C6CEDD; border-radius: 4px; }
+
+.mat-mdc-raised-button.cobalt {
+  --mdc-protected-button-container-color: var(--cobalt);
+  --mdc-protected-button-label-text-color: #fff;
+}
