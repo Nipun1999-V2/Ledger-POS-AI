@@ -1,4 +1,4 @@
-# Ledger POS — Online POS System with Raw Material Inventory & AI
+# Ledger POS — Online POS System with Raw Material Inventory & AI with AWS
 
 A full-stack point-of-sale system for a business that sells finished
 products **and** raw materials, built with:
